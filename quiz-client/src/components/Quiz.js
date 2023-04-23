@@ -24,6 +24,8 @@ export default function Quiz() {
   }
 
   useEffect(() => {
+    const ids = JSON.parse(localStorage.getItem("idsTema"))
+
     setContext({
       timeTaken: 0,
       selectedOptions: []
@@ -31,9 +33,28 @@ export default function Quiz() {
     createAPIEndpoint(ENDPOINTS.question)
       .fetch()
       .then(res => {
-        console.log('res.data')
-        console.log(res.data)
-        setQns(res.data)
+        let preguntas = []
+        ids.forEach((id) => {
+          const newArr = res.data.filter(da => da.idTema === id)
+          newArr.forEach(x => preguntas.push(x))
+        })
+
+        const randomPreguntas = [];
+
+        const indices = []
+        for (let i = 0; i < 10;) {
+          const randomIndex = Math.floor(Math.random() * preguntas.length)
+          if (indices.findIndex((indice) => indice === randomIndex) === -1) {
+            indices.push(randomIndex)
+            const randomElement = preguntas[randomIndex]
+            randomPreguntas.push(randomElement)
+            i++
+          }
+
+        }
+
+        console.log({ randomPreguntas })
+        setQns(randomPreguntas)
         startTimer()
       })
       .catch(err => { console.log(err); })
@@ -56,6 +77,10 @@ export default function Quiz() {
       setContext({ selectedOptions: [...temp], timeTaken })
       navigate("/result")
     }
+  }
+
+  const flitrar = () => {
+
   }
 
   return (

@@ -30,18 +30,14 @@ namespace QuizAPI.Migrations
                 {
                     QnId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    QnInWords = table.Column<string>(type: "nvarchar(250)", nullable: false),
-                    ImageName = table.Column<string>(type: "nvarchar(50)", nullable: true),
-                    Option1 = table.Column<string>(type: "nvarchar(50)", nullable: false),
-                    Option2 = table.Column<string>(type: "nvarchar(50)", nullable: false),
-                    Option3 = table.Column<string>(type: "nvarchar(50)", nullable: false),
-                    Option4 = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    QnInWords = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
+                    ImageName = table.Column<string>(type: "nvarchar(MAX)", nullable: true),
+                    Option1 = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
+                    Option2 = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
+                    Option3 = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
+                    Option4 = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
                     Answer = table.Column<int>(type: "int", nullable: false),
-<<<<<<< Updated upstream
-                    Tipo = table.Column<int>(type: "int", nullable: false)
-=======
                     IdTema = table.Column<int>(type: "int", nullable: false)
->>>>>>> Stashed changes
                 },
                 constraints: table =>
                 {

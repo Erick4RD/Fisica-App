@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Card, CardContent, TextField, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import Center from './Center'
@@ -19,6 +19,10 @@ export default function Login() {
   const { context, setContext, resetContext } = useStateContext();
   const navigate = useNavigate()
 
+  const [ranking, setRanking] = useState([])
+
+  // let ranking = []
+
   const {
     values,
     setValues,
@@ -29,6 +33,12 @@ export default function Login() {
 
   useEffect(() => {
     resetContext()
+    createAPIEndpoint(ENDPOINTS.ranking)
+      .fetch()
+      .then(res => {
+        console.log(res.data)
+        setRanking([...res.data])
+      })
   }, [])
 
 
@@ -39,7 +49,8 @@ export default function Login() {
         .post(values)
         .then(res => {
           setContext({ participantId: res.data.participantId })
-          navigate('/quiz')
+          navigate('/quiz-tematica')
+          // navigate('/quiz')
         })
         .catch(err => console.log(err))
   }
@@ -76,11 +87,23 @@ export default function Login() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      flexDirection: 'column',
+      // flexDirection: 'column',
       height: '100vh',
-      padding: '20px'
+      padding: '20px 10vw',
+      gap: '25px',
     }}>
-      <div style={{ backgroundColor: "#f9f9f9", padding: "20px", borderRadius: "10px", boxShadow: "0 0 10px 3px #0000006e", color: "#000" }}>
+      <div style={{
+        backgroundColor: "#f9f9f9",
+        padding: "20px",
+        borderRadius: "10px",
+        boxShadow: "0 0 10px 3px #0000006e",
+        color: "#000",
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '350px'
+      }}>
         <header>
           <Typography variant="h3" sx={{ my: 3 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px', justifyContent: 'center' }}>
@@ -119,6 +142,27 @@ export default function Login() {
             <a href="/Estudiar">Estudiar</a>
           </div>
         </form>
+      </div>
+
+      <div style={{
+        backgroundColor: "#f9f9f9",
+        padding: "20px",
+        borderRadius: "10px",
+        boxShadow: "0 0 10px 3px #0000006e",
+        color: "#000",
+        height: '350px'
+      }}>
+        <header>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', justifyContent: '' }}>
+            <img src="./result.png" alt="" style={{ height: '75px' }} />
+            <h3>Top 10 </h3>
+          </div>
+        </header>
+        <div style={{ maxHeight: '70%', overflow: 'auto', padding: '0 10px' }}>
+          {ranking.length > 0 &&
+            ranking.map((ran, i) => <div className={`topUser top${i + 1}`}>#{i + 1} - {ran.name} (Puntuación: {ran.score})</div>)
+          }
+        </div>
       </div>
     </section>
 

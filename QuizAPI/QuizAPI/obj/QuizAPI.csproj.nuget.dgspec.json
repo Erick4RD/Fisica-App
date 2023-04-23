@@ -1,22 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Github_Erick\\Quiz-App\\Fisica-App\\QuizAPI\\QuizAPI\\QuizAPI.csproj": {}
-  },
-  "projects": {
-    "C:\\Github_Erick\\Quiz-App\\Fisica-App\\QuizAPI\\QuizAPI\\QuizAPI.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Github_Erick\\Quiz-App\\Fisica-App\\QuizAPI\\QuizAPI\\QuizAPI.csproj",
-        "projectName": "QuizAPI",
-        "projectPath": "C:\\Github_Erick\\Quiz-App\\Fisica-App\\QuizAPI\\QuizAPI\\QuizAPI.csproj",
-        "packagesPath": "C:\\Users\\lapar\\.nuget\\packages\\",
-        "outputPath": "C:\\Github_Erick\\Quiz-App\\Fisica-App\\QuizAPI\\QuizAPI\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\lapar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
     "A:\\Documents\\Fisica-App\\QuizAPI\\QuizAPI\\QuizAPI.csproj": {}
   },
   "projects": {
@@ -35,7 +19,6 @@
         "configFilePaths": [
           "C:\\Users\\hfsa2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,11 +86,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< Updated upstream
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
-=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
->>>>>>> Stashed changes
         }
       }
     }

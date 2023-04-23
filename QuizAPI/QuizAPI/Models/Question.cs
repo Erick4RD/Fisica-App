@@ -8,29 +8,24 @@ namespace QuizAPI.Models
         [Key]
         public int QnId { get; set; }
 
-        [Column(TypeName ="nvarchar(250)")]
+        [Column(TypeName = "nvarchar(MAX)")]
         public string QnInWords { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "nvarchar(MAX)")]
         public string? ImageName { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "nvarchar(MAX)")]
         public string Option1 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "nvarchar(MAX)")]
         public string Option2 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "nvarchar(MAX)")]
         public string Option3 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "nvarchar(MAX)")]
         public string Option4 { get; set; }
         public int Answer { get; set; }
-<<<<<<< Updated upstream
-
-        public int Tipo { get; set; }
-=======
         public int IdTema { get; set; }
->>>>>>> Stashed changes
     }
 }

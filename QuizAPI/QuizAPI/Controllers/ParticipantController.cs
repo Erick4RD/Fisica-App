@@ -28,6 +28,26 @@ namespace QuizAPI.Controllers
             return await _context.Participants.ToListAsync();
         }
 
+        // GET: api/ParticipantsRanking
+        [HttpGet("Ranking")]
+
+        public async Task<ActionResult<IEnumerable<Participant>>> GetParticipantsRanking()
+        {
+            var s = await (_context.Participants
+                 .Select(x => new
+                 {
+                     Name = x.Name,
+                     Score = x.Score,
+                     Correo = x.Email
+
+                 })
+                 .OrderByDescending(y => y.Score)
+                 .Take(10)
+                 ).ToListAsync();
+
+            return Ok(s);
+        }
+
         // GET: api/Participant/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Participant>> GetParticipant(int id)

@@ -146,3 +146,116 @@ label.Mui-focused {
   align-content: center;
   box-shadow: 0 0 10px 2px #00000045;
 }
+
+
+
+
+
+
+
+
+
+/* Tematicas Quiz */
+
+.sectionQuizTematicas {
+  background-color: #F8F9FA;
+  padding: 25px;
+  padding-top: 55px;
+  border-radius: 5px;
+  height: 60vh;
+  width: 60vw;
+  position: relative;
+}
+
+.pageQuizTematicas {
+  max-height: 80%;
+  height: 100%;
+}
+
+.opcionTema {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  border-radius: 3px;
+  padding: 10px;
+  box-shadow: 0 0 5px 0px #0000002a;
+  margin: 10px 0;
+  position: relative;
+}
+
+.opcionTema:hover {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #cbefff;
+  cursor: pointer;
+}
+
+.label-tema {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.blockTitle {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background-color: #1A759F;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px #00000045;
+}
+
+.btn-iniciar {
+  text-decoration: none;
+  background-color: #184E77;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.block-btn-iniciar {
+  display: flex;
+  justify-content: end;
+}
+
+.btn {
+  border: none;
+}
+
+.topUser {
+  padding: 10px 25px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 450px;
+  box-shadow: 0 0 5px 1px #0000002d;
+}
+
+.top1 {
+  background-color: #FBBF09;
+}
+.top2 {
+  background-color: #ffd24d;
+}
+
+.top3 {
+  background-color: #fce6a5;
+}
+
+.top4 {
+  background-color: #fff2cb;
+}
+.top5 {
+  background-color: #fffbef;
+}

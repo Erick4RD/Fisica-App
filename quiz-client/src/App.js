@@ -7,6 +7,7 @@ import Quiz from './components/Quiz';
 import Result from './components/Result';
 import Estudiar from './components/Estudiar';
 import ResultEstudiar from './components/ResultEstudiar';
+import QuizTematicas from './components/QuizTematicas';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route element={<Authenticate />}>
           <Route path="/" element={<Layout />}>
+            <Route path="/quiz-tematica" element={<QuizTematicas />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/result" element={<Result />} />
           </Route>

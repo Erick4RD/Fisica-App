@@ -35,7 +35,6 @@ namespace QuizAPI.Controllers
                      IdTema = x.IdTema,
                  })
                  .OrderBy(y => Guid.NewGuid())
-                 .Take(10)
                  ).ToListAsync();
 
             return Ok(random5Qns);
