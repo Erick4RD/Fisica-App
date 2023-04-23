@@ -65,42 +65,50 @@ export default function Result() {
 
   return (
     <>
-      <Card sx={{ mt: 5, display: 'flex', width: '100%', maxWidth: 640, mx: 'auto' }}>
+      <Card sx={{ display: 'flex', width: '100%', height: '25vh' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-          <CardContent sx={{ flex: '1 0 auto', textAlign: 'center' }}>
-            <Typography variant="h4">Congratulations!</Typography>
+          <CardContent sx={{ display: 'flex', flex: '1 0 auto', textAlign: 'center', justifyContent: 'center', position: 'relative', alignItems: 'center', flexDirection: 'column' }}>
+            <Typography variant="h4">Fin del cuentionario!</Typography>
             <Typography variant="h6">
-              YOUR SCORE
+              TU PUNTUACIÓN
             </Typography>
             <Typography variant="h5" sx={{ fontWeight: 600 }}>
               <Typography variant="span" color={green[500]}>
                 {score}
-              </Typography>/5
+              </Typography>/10
             </Typography>
             <Typography variant="h6">
-              Took {getFormatedTime(context.timeTaken) + ' mins'}
+              Tiempo {getFormatedTime(context.timeTaken) + ' mins'}
             </Typography>
-            <Button variant="contained"
-              sx={{ mx: 1 }}
-              size="small"
-              onClick={submitScore}>
-              Submit
-            </Button>
-            <Button variant="contained"
-              sx={{ mx: 1 }}
-              size="small"
-              onClick={restart}>
-              Re-try
-            </Button>
+
+            <div style={{marginTop: '10px'}}>
+              <Button variant="contained"
+                sx={{ mx: 1, backgroundColor: '#038C8C', color: '#fff', height: '2.5rem' }}
+                size="small"
+                onClick={submitScore}>
+                Entregar
+              </Button>
+              <Button variant="contained"
+                sx={{ mx: 1, backgroundColor: '#038C8C', color: '#fff', height: '2.5rem' }}
+                size="small"
+                onClick={restart}>
+                Intentar de nuevo
+              </Button>
+            </div>
+
+
             <Alert
               severity="success"
               variant="string"
               sx={{
-                width: '60%',
+
                 m: 'auto',
-                visibility: showAlert ? 'visible' : 'hidden'
+                visibility: showAlert ? 'visible' : 'hidden',
+                position: 'absolute',
+                bottom: '10px',
+                left: 0
               }}>
-              Score Updated.
+              Puntuación actualizada.
             </Alert>
           </CardContent>
         </Box>

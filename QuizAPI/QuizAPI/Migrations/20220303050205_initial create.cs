@@ -37,7 +37,11 @@ namespace QuizAPI.Migrations
                     Option3 = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     Option4 = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     Answer = table.Column<int>(type: "int", nullable: false),
+<<<<<<< Updated upstream
                     Tipo = table.Column<int>(type: "int", nullable: false)
+=======
+                    IdTema = table.Column<int>(type: "int", nullable: false)
+>>>>>>> Stashed changes
                 },
                 constraints: table =>
                 {

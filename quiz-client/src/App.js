@@ -5,6 +5,8 @@ import Layout from './components/Layout';
 import Login from './components/Login';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
+import Estudiar from './components/Estudiar';
+import ResultEstudiar from './components/ResultEstudiar';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path="/result" element={<Result />} />
           </Route>
         </Route>
+        <Route path="/Estudiar" element={<Estudiar />} />
+        <Route path="/Estudiar/:Page" element={<ResultEstudiar />} />
       </Routes>
     </BrowserRouter >
   );

@@ -1,0 +1,148 @@
+.btn-sumit {}
+
+.btn-sumit:hover {
+  background-color: #00bebe !important;
+}
+
+body {
+  background-image: url('../../public/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+fieldset {
+  border-color: rgb(0, 0, 0) !important;
+  color: black !important;
+}
+
+.MuiOutlinedInput-root {
+  color: black !important;
+}
+
+label.Mui-focused {
+  color: #000000 !important;
+}
+
+.MuiInputLabel-root {
+  color: #8b8b8b !important;
+}
+
+.MuiInputLabel-root {
+  color: #8b8b8b !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estudiar */
+.section-estudiar {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-rows: repeat(auto-fit, 170px);
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 30px;
+}
+
+.block-tema-estudio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.cardHead {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.block-btn-estudiar {
+  display: flex;
+  justify-content: end;
+}
+
+.btn-estudiar {
+  border: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  background-color: #184E77;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.blockVolver {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.btn-volver {
+  color: #fff;
+  background: #038C8C;
+  padding: 10px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+/* Resultados estudiar */
+
+.sectionResult {
+  color: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageTema {
+  background-color: #fff;
+  height: auto;
+  width: 50vw;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 5px #0000007d;
+  padding: 20px 25px;
+  position: relative;
+}
+
+.pageBody {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.goback {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background-color: #599e71;
+  padding: 15px 16px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 0 10px 2px #00000045;
+}

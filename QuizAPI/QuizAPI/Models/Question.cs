@@ -25,9 +25,12 @@ namespace QuizAPI.Models
 
         [Column(TypeName = "nvarchar(50)")]
         public string Option4 { get; set; }
-
         public int Answer { get; set; }
+<<<<<<< Updated upstream
 
         public int Tipo { get; set; }
+=======
+        public int IdTema { get; set; }
+>>>>>>> Stashed changes
     }
 }

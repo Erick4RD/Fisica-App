@@ -31,10 +31,11 @@ namespace QuizAPI.Controllers
                      QnId = x.QnId,
                      QnInWords = x.QnInWords,
                      ImageName = x.ImageName,
-                     Options = new string[] { x.Option1, x.Option2, x.Option3, x.Option4 }
+                     Options = new string[] { x.Option1, x.Option2, x.Option3, x.Option4 },
+                     IdTema = x.IdTema,
                  })
                  .OrderBy(y => Guid.NewGuid())
-                 .Take(5)
+                 .Take(10)
                  ).ToListAsync();
 
             return Ok(random5Qns);
