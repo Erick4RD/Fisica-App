@@ -36,7 +36,8 @@ namespace QuizAPI.Migrations
                     Option2 = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     Option3 = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     Option4 = table.Column<string>(type: "nvarchar(50)", nullable: false),
-                    Answer = table.Column<int>(type: "int", nullable: false)
+                    Answer = table.Column<int>(type: "int", nullable: false),
+                    Tipo = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

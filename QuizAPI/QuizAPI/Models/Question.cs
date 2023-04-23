@@ -27,5 +27,7 @@ namespace QuizAPI.Models
         public string Option4 { get; set; }
 
         public int Answer { get; set; }
+
+        public int Tipo { get; set; }
     }
 }
