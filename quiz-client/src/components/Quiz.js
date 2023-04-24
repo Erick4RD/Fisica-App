@@ -99,7 +99,7 @@ export default function Quiz() {
         {qns[qnIndex]?.imageName != null
           ? <CardMedia
             component="img"
-            image={BASE_URL + 'images/' + qns[qnIndex]?.imageName}
+            image={ './' + qns[qnIndex]?.imageName}
             sx={{ width: 'auto', m: '10px auto' }} />
           : null}
         <CardContent>

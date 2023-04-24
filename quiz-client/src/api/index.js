@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const BASE_URL = 'http://localhost:5041/';
+export const BASE_URL = 'http://FisicArena.somee.com/';
 
 export const ENDPOINTS = {
     participant: 'participant',

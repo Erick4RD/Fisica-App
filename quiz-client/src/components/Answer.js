@@ -41,7 +41,7 @@ export default function Answer({ qnAnswers }) {
             {item.imageName ?
               <CardMedia
                 component="img"
-                image={BASE_URL + 'images/' + item.imageName}
+                image={ './' + item.imageName}
                 sx={{ m: '10px auto', width: 'auto' }}
               /> : null}
             <List>
