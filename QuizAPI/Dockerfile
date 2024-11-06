@@ -9,11 +9,14 @@ RUN dotnet restore
 # Publica el proyecto en modo Release
 RUN dotnet publish -c Release -o out
 
-RUN mkdir -p /app/Images
-
 # Usa una imagen más ligera para la ejecución de la aplicación
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
 WORKDIR /app
+
+# Crea la carpeta /app/Images en el contenedor de runtime
+RUN mkdir -p /app/Images
+
+# Copia los archivos publicados desde la imagen build a runtime
 COPY --from=build /app/out .
 
 # Comando para ejecutar la aplicación
