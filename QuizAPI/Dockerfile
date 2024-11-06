@@ -19,5 +19,8 @@ RUN mkdir -p /app/Images
 # Copia los archivos publicados desde la imagen build a runtime
 COPY --from=build /app/out .
 
+# Expone el puerto que la app escuchará (importante)
+EXPOSE 5000
+
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["dotnet", "QuizAPI.dll"]
