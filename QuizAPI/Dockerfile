@@ -9,6 +9,8 @@ RUN dotnet restore
 # Publica el proyecto en modo Release
 RUN dotnet publish -c Release -o out
 
+RUN mkdir -p /app/Images
+
 # Usa una imagen más ligera para la ejecución de la aplicación
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
 WORKDIR /app
